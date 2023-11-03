@@ -1,0 +1,26 @@
+﻿p {
+    text-align: center;
+}
+
+.textoDef{
+    text-align: left;
+}
+
+#contedor {
+    text-align: center;
+    padding-top: 10px;
+}
+
+#enlaces {
+    margin-top: -10px;
+    margin-bottom: -8px;
+}
+
+.link {
+    padding: 10px;
+}
+
+h1{
+    text-align: center;
+}
+

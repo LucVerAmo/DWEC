@@ -1,0 +1,60 @@
+﻿#titulo{
+    text-align: center;
+    font-size:large;
+}
+
+.texto{
+    display:inline-block;
+    width: 45%;
+    margin: 5px;
+    text-align: right;
+    margin-left: -150px;
+    margin-right: 30px;
+}
+.label{
+    display: flex;
+    margin-left: 200px;
+}
+
+.nac{
+    float: left;
+}
+
+.ing {
+    float: left;
+    margin-left: 400px;
+}
+
+.calendario {
+    float: left;
+    margin-left: 50px;
+}
+
+.calendario2 {
+    float: left;
+}
+
+.anti {
+    float: right;
+    margin-right: 50px;
+    margin-top: -40px;
+    margin-left: 0px;
+    margin-right: 60px;
+}
+
+.textBox {
+    padding-top: 0px;
+    margin-top: 20px;
+    margin-left: -106px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+
+.labelError{
+    text-align:center;
+}
+
+.sexo{
+    display:inline-block;
+}
