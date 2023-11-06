@@ -20,8 +20,8 @@ namespace GesTienda
             string StrCadenaConexion =
             ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             string StrComandoSql = "SELECT Login, Rol FROM USUARIO ";
-            StrComandoSql = StrComandoSql + " WHERE Login='" + Login1.UserName + "' ";
-            StrComandoSql = StrComandoSql + "AND Password='" + Login1.Password + "';";
+            StrComandoSql = StrComandoSql + " WHERE Login= '" + Login1.UserName + "' ";
+            StrComandoSql = StrComandoSql + "AND Password= '" + Login1.Password + "';";
             using (SqlConnection conexion = new SqlConnection(StrCadenaConexion))
             {
                 try
@@ -37,15 +37,14 @@ namespace GesTienda
                         e.Authenticated = true;
                         if (Convert.ToString(Session["Rol"]) == "A")
                         {
-                            //Response.Redirect("~/InicioAdmin.aspx");
+                            Response.Redirect("~/InicioAdmin.aspx");
                         }
 
                         if (Convert.ToString(Session["Rol"]) == "U")
-                            {
-                                lblMensajes.Visible = true;
-                                lblMensajes.Text = "Va bien";
-                            }
-                            //Response.Redirect("~/InicioUsuario.aspx");
+                        {
+                            Response.Redirect("~/InicioUsuario.aspx");
+                        }
+                            
                     }
                     else
                     {
