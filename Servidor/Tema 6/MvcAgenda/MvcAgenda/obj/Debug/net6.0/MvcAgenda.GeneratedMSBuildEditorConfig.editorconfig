@@ -20,6 +20,26 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/lucveramo.AULA2506/OneDrive/Escritorio/DWEC/Servidor/Tema 6/MvcAgenda/MvcAgenda/Views/Departamentos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lucveramo.AULA2506/OneDrive/Escritorio/DWEC/Servidor/Tema 6/MvcAgenda/MvcAgenda/Views/Departamentos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lucveramo.AULA2506/OneDrive/Escritorio/DWEC/Servidor/Tema 6/MvcAgenda/MvcAgenda/Views/Departamentos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lucveramo.AULA2506/OneDrive/Escritorio/DWEC/Servidor/Tema 6/MvcAgenda/MvcAgenda/Views/Departamentos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lucveramo.AULA2506/OneDrive/Escritorio/DWEC/Servidor/Tema 6/MvcAgenda/MvcAgenda/Views/Departamentos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/lucveramo.AULA2506/OneDrive/Escritorio/DWEC/Servidor/Tema 6/MvcAgenda/MvcAgenda/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
