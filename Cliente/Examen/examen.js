@@ -44,6 +44,7 @@ function CrearOrdenador(marca, modelo, ram, disco, pulgadas, fecha, ...accesorio
     else {
         this.fecha = Date.parse(fecha);
     }
+    
     this.accesorios = new Array;
     if(accesorios.length < 0){
         for(let i = 0; i < accesorios.length; i++){
@@ -130,4 +131,18 @@ function mostrarOrdenadores(){
         cadena += `${ordenador.mostrarOrdenador()}`
     }
 }
-function ultimoejercicio()
+function ultimoejercicio(){
+        if(periodo == undefined){
+            periodo = "mes";
+        }
+        let filGasto = filtrarGastos({
+            fechaDesde: fechaDesde,
+            fechaHasta: fechaHasta,
+            etiquetasTiene: etiquetas
+        });
+        return filGasto.reduce(function(acc, gasto){
+            let periodosAgrupados = gasto.obtenerPeriodoAgrupacion(periodo);
+            acc[periodosAgrupados] = (acc[periodosAgrupados] || 0) + gasto.valor;
+            return acc;
+        }, {})
+}
