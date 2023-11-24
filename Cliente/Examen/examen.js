@@ -133,7 +133,7 @@ function mostrarOrdenadores(){
 }
 function ultimoejercicio(){
     return ordenadores.reduce(function(acc, ordenador){
-        let fecha = new Date(ordenodor.fecha);
+        let fecha = new Date(ordenador.fecha);
         fecha = fecha.toLocaleDateString();
         acc[fecha] = (acc[fecha] ||0) + 1;
         return acc;
