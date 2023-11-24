@@ -132,17 +132,10 @@ function mostrarOrdenadores(){
     }
 }
 function ultimoejercicio(){
-        if(periodo == undefined){
-            periodo = "mes";
-        }
-        let filGasto = filtrarGastos({
-            fechaDesde: fechaDesde,
-            fechaHasta: fechaHasta,
-            etiquetasTiene: etiquetas
-        });
-        return filGasto.reduce(function(acc, gasto){
-            let periodosAgrupados = gasto.obtenerPeriodoAgrupacion(periodo);
-            acc[periodosAgrupados] = (acc[periodosAgrupados] || 0) + gasto.valor;
-            return acc;
-        }, {})
+    return ordenadores.reduce(function(acc, ordenador){
+        let fecha = new Date(ordenodor.fecha);
+        fecha = fecha.toLocaleDateString();
+        acc[fecha] = (acc[fecha] ||0) + 1;
+        return acc;
+    },{})
 }
