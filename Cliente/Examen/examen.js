@@ -139,3 +139,5 @@ function ultimoejercicio(){
         return acc;
     },{})
 }
+
+console.log("patata");
