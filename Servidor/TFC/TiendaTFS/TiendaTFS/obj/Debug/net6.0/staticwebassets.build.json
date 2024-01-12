@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8ARAHymqX9SV88dwD53ESTd8Mb5OWjZQIEAtYUdXUFU=",
+  "Hash": "C87TqHxPrlTnPvnUNLR81vUkd5UBhGYAzK7bOUGiDnU=",
   "Source": "TiendaTFS",
   "BasePath": "_content/TiendaTFS",
   "Mode": "Default",
@@ -1103,6 +1103,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\lucveramo.AULA2506\\OneDrive\\Escritorio\\DWEC\\Servidor\\TFC\\TiendaTFS\\TiendaTFS\\wwwroot\\Imagenes\\1.jpg",
+      "SourceId": "TiendaTFS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lucveramo.AULA2506\\OneDrive\\Escritorio\\DWEC\\Servidor\\TFC\\TiendaTFS\\TiendaTFS\\wwwroot\\",
+      "BasePath": "_content/TiendaTFS",
+      "RelativePath": "Imagenes/1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Imagenes\\1.jpg"
     },
     {
       "Identity": "C:\\Users\\lucveramo.AULA2506\\OneDrive\\Escritorio\\DWEC\\Servidor\\TFC\\TiendaTFS\\TiendaTFS\\wwwroot\\js\\site.js",

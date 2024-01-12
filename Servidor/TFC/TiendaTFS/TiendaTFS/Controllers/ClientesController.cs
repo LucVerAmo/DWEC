@@ -20,11 +20,16 @@ namespace TiendaTFS.Controllers
         }
 
         // GET: Clientes
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? pageNumber)
         {
-              return _context.Clientes != null ? 
-                          View(await _context.Clientes.ToListAsync()) :
-                          Problem("Entity set 'MvcTiendaTFSContexto.Clientes'  is null.");
+            // Cargar datos de Empleados
+            var clientes = from s in _context.Clientes
+                            select s;
+            int pageSize = 3;
+            return View(await PaginatedList<Cliente>.CreateAsync(clientes.AsNoTracking(),
+            pageNumber ?? 1, pageSize));
+            // return View(await _context.Empleados.ToListAsync()) :
+
         }
 
         // GET: Clientes/Details/5

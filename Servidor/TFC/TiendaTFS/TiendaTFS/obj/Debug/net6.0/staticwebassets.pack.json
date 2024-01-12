@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\TiendaTFS.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\lucveramo.AULA2506\\OneDrive\\Escritorio\\DWEC\\Servidor\\TFC\\TiendaTFS\\TiendaTFS\\wwwroot\\Imagenes\\1.jpg",
+      "PackagePath": "staticwebassets\\Imagenes\\1.jpg"
+    },
+    {
       "Id": "C:\\Users\\lucveramo.AULA2506\\OneDrive\\Escritorio\\DWEC\\Servidor\\TFC\\TiendaTFS\\TiendaTFS\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
