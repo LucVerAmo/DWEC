@@ -1,3 +1,7 @@
 Admin:
 Lucadmin@tienda.com
 Administrador101!
+
+Cliente:
+ElPruebas@gmail.com
+Prueba1!
