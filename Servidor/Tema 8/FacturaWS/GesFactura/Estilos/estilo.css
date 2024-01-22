@@ -1,0 +1,23 @@
+﻿.titulo{
+    text-align:center;
+}
+
+.inicio{
+    float:none;
+    margin-left:40%;
+}
+
+.txtB{
+    float:none;
+    margin-left:1%;
+}
+
+#btnEnviar{
+    float:none;
+    margin-left:40%;
+}
+
+.parteB {
+    float: none;
+    margin-left: 40%;
+}

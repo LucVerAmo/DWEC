@@ -1,0 +1,20 @@
+﻿body {
+}
+
+.titulos{
+    text-align:center;
+}
+
+#txtCurso{
+    float:none;
+    margin-left:1%;
+}
+
+#btnObtenerInformacion {
+    float: none;
+    margin-left: 1%;
+}
+
+.texto{
+    text-align:center;
+}
