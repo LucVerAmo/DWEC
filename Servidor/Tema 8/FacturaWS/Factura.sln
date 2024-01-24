@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacturaWS", "FacturaWS\FacturaWS.csproj", "{31C72324-6E7B-4E2C-B6B1-119ADDF320EA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GesFactura", "GesFactura\GesFactura.csproj", "{E7A593A6-A73C-48EC-9539-F4E0D19F1653}"
+	ProjectSection(ProjectDependencies) = postProject
+		{31C72324-6E7B-4E2C-B6B1-119ADDF320EA} = {31C72324-6E7B-4E2C-B6B1-119ADDF320EA}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

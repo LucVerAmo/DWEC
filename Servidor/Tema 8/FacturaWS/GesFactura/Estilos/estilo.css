@@ -19,5 +19,10 @@
 
 .parteB {
     float: none;
-    margin-left: 40%;
+    margin-left:40%;
+}
+
+.parteM {
+    float: none;
+    margin-left:10%;
 }
