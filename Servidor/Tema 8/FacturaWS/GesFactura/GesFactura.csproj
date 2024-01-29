@@ -69,19 +69,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReference1\CalculosFacturaWS.disco" />
-    <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
-    <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
-    <Content Include="Connected Services\ServiceReference1\GesFactura.ServiceReference1.Calculos.datasource">
+    <None Include="Connected Services\ServiceReference2\CalculosFacturaWS.disco" />
+    <None Include="Connected Services\ServiceReference2\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceReference2\configuration.svcinfo" />
+    <Content Include="Connected Services\ServiceReference2\GesFactura.ServiceReference2.Calculos.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServiceReference1\GesFactura.ServiceReference1.CalculosLineaFacturaResponse.datasource">
+    <Content Include="Connected Services\ServiceReference2\GesFactura.ServiceReference2.CalculosLineaFacturaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServiceReference1\GesFactura.ServiceReference1.HelloWorldResponse.datasource">
+    <Content Include="Connected Services\ServiceReference2\GesFactura.ServiceReference2.HelloWorldResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\ServiceReference1\Reference.svcmap">
+    <None Include="Connected Services\ServiceReference2\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -90,7 +90,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\ServiceReference1\Reference.cs">
+    <Compile Include="Connected Services\ServiceReference2\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -105,7 +105,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReference1\CalculosFacturaWS.wsdl" />
+    <None Include="Connected Services\ServiceReference2\CalculosFacturaWS.wsdl" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -118,7 +118,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
+    <WCFMetadataStorage Include="Connected Services\ServiceReference2\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

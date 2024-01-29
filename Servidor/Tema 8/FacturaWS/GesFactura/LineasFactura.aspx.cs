@@ -1,4 +1,4 @@
-﻿using GesFactura.ServiceReference1;
+﻿using GesFactura.ServiceReference2;
 using System;
 using System.Collections.Generic;
 using System.Linq;

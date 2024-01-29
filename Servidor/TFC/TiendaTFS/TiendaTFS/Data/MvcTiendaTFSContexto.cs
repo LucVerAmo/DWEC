@@ -25,5 +25,6 @@ namespace TiendaTFS.Data
                 relationship.DeleteBehavior = DeleteBehavior.Restrict;
             }
         }
+        public DbSet<TiendaTFS.Models.Escaparate>? Escaparate { get; set; }
     }
 }

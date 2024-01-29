@@ -17,7 +17,7 @@ namespace TiendaTFS.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.13")
+                .HasAnnotation("ProductVersion", "6.0.26")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -104,6 +104,29 @@ namespace TiendaTFS.Migrations
                     b.HasIndex("ProductoId");
 
                     b.ToTable("Detalles");
+                });
+
+            modelBuilder.Entity("TiendaTFS.Models.Escaparate", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("CategoriaId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductoId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoriaId");
+
+                    b.HasIndex("ProductoId");
+
+                    b.ToTable("Escaparate");
                 });
 
             modelBuilder.Entity("TiendaTFS.Models.Estado", b =>
@@ -223,6 +246,25 @@ namespace TiendaTFS.Migrations
                         .IsRequired();
 
                     b.Navigation("Pedido");
+
+                    b.Navigation("Producto");
+                });
+
+            modelBuilder.Entity("TiendaTFS.Models.Escaparate", b =>
+                {
+                    b.HasOne("TiendaTFS.Models.Categoria", "Categoria")
+                        .WithMany()
+                        .HasForeignKey("CategoriaId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("TiendaTFS.Models.Producto", "Producto")
+                        .WithMany()
+                        .HasForeignKey("ProductoId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Categoria");
 
                     b.Navigation("Producto");
                 });

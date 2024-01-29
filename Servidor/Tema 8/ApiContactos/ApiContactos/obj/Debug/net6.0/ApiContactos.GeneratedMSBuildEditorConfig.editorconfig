@@ -1,0 +1,41 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ApiContactos
+build_property.RootNamespace = ApiContactos
+build_property.ProjectDir = C:\Users\lucveramo.AULA2506\OneDrive\Escritorio\DWEC\Servidor\Tema 8\ApiContactos\ApiContactos\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\lucveramo.AULA2506\OneDrive\Escritorio\DWEC\Servidor\Tema 8\ApiContactos\ApiContactos
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/lucveramo.AULA2506/OneDrive/Escritorio/DWEC/Servidor/Tema 8/ApiContactos/ApiContactos/Views/Contactos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdG9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lucveramo.AULA2506/OneDrive/Escritorio/DWEC/Servidor/Tema 8/ApiContactos/ApiContactos/Views/Contactos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdG9zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lucveramo.AULA2506/OneDrive/Escritorio/DWEC/Servidor/Tema 8/ApiContactos/ApiContactos/Views/Contactos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdG9zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lucveramo.AULA2506/OneDrive/Escritorio/DWEC/Servidor/Tema 8/ApiContactos/ApiContactos/Views/Contactos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdG9zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lucveramo.AULA2506/OneDrive/Escritorio/DWEC/Servidor/Tema 8/ApiContactos/ApiContactos/Views/Contactos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdG9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lucveramo.AULA2506/OneDrive/Escritorio/DWEC/Servidor/Tema 8/ApiContactos/ApiContactos/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
