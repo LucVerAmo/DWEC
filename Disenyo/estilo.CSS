@@ -1,0 +1,41 @@
+.contenedor{
+    margin-left: 10%;
+    margin-bottom: 5%;
+    border: solid;
+    height: 500px;
+    width: 850px;
+    border-radius: 10%;
+}
+ 
+.textos{
+    margin-top: 20%;
+}
+
+.texto-In{
+    float: left;
+    margin-left: 2%;
+}
+
+.texto-largo{
+    float: left;
+    width: 41%;
+    margin-top: 0%;
+    margin-left: 2%;
+}
+
+.boton{
+    float: left;
+    margin-right: 44%;
+}
+
+.contenedor2{
+    float: right;
+    margin-right: 1%;
+    height: 100%;
+    width: 0%;
+}
+.imagen{
+    float: right;
+    margin-top: 13%;
+    margin-right: 1%;
+}
