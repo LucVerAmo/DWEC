@@ -19,8 +19,23 @@ namespace TiendaTFS.Controllers
             _context = context;
         }
         // GET: Escaparates
-        public async Task<IActionResult> Index(string strCadenaBusqueda, string busquedaActual, int? categoriaId, int? categoriaIdActual, int? pageNumber)
+        public async Task<IActionResult> Index(int? id)
         {
+            var productos = _context.Productos.AsQueryable();
+
+            if(id == null)
+            {
+                productos = productos.Where(x =>  x.Escaparate == true);
+            }
+            else
+            {
+                productos = productos.Where(x => x.CategoriaId == id);
+                ViewBag.DescripcionCategoria = _context.Categorias.Find(id).Descripcion.ToString();
+            }
+            ViewData["ListaCategorias"] = _context.Categorias.OrderBy(c => c.Descripcion).ToList();
+            productos = productos.Include(a => a.Categoria);
+            return View(await productos.ToListAsync());
+            /*
             if(pageNumber <= 0)
             {
                 pageNumber = 1;
@@ -63,6 +78,7 @@ namespace TiendaTFS.Controllers
             productos = productos.Where(x => x.Stock > 0).Include(x => x.Categoria);
             int pageSize = 12;
             return View(await PaginatedList<Producto>.CreateAsync(productos.AsNoTracking(), pageNumber ?? 1, pageSize));
+            */
         }
 
         // GET: Escaparates/Details/5
