@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TiendaTFS.Data;
 using TiendaTFS.Models;
@@ -12,20 +8,20 @@ namespace TiendaTFS.Controllers
 {
     public class EscaparatesController : Controller
     {
-        private readonly MvcTiendaTFSContexto _context;
+        private MvcTiendaTFSContexto _context;
 
         public EscaparatesController(MvcTiendaTFSContexto context)
         {
             _context = context;
         }
-        // GET: Escaparates
+        // GET: EscaparatesController
         public async Task<IActionResult> Index(int? id)
         {
             var productos = _context.Productos.AsQueryable();
 
-            if(id == null)
+            if (id == null)
             {
-                productos = productos.Where(x =>  x.Escaparate == true);
+                productos = productos.Where(x => x.Escaparate == true);
             }
             else
             {
@@ -35,183 +31,75 @@ namespace TiendaTFS.Controllers
             ViewData["ListaCategorias"] = _context.Categorias.OrderBy(c => c.Descripcion).ToList();
             productos = productos.Include(a => a.Categoria);
             return View(await productos.ToListAsync());
-            /*
-            if(pageNumber <= 0)
-            {
-                pageNumber = 1;
-            }
-            if(strCadenaBusqueda != null)
-            {
-                pageNumber = 1;
-            }
-            else
-            {
-                strCadenaBusqueda = busquedaActual;
-            }
-            ViewData["BusquedaActual"] = strCadenaBusqueda;
-            if(categoriaIdActual != null)
-            {
-                pageNumber = 1;
-            }
-            else
-            {
-                categoriaId = categoriaIdActual;
-            }
-            ViewData["categoriaIdActual"] = categoriaId;
-
-            var productos = _context.Productos.AsQueryable();
-            productos = productos.OrderBy(x => x.Descripcion);
-            if (!String.IsNullOrEmpty(strCadenaBusqueda))
-            {
-                productos = productos.Where(s => s.Descripcion.Contains(strCadenaBusqueda));
-            }
-            if(categoriaId == null)
-            {
-                ViewData["categoriaId"] = new SelectList(_context.Productos, "Id", "Descripcion");
-            }
-            else
-            {
-                ViewData["categoriaId"] = new SelectList(_context.Productos, "Id", "Descripcion", categoriaId);
-                productos = productos.Where(x => x.CategoriaId == categoriaId);
-            }
-            ViewData["ListaCategorias"] = _context.Categorias.OrderBy(c => c.Descripcion).ToList();
-            productos = productos.Where(x => x.Stock > 0).Include(x => x.Categoria);
-            int pageSize = 12;
-            return View(await PaginatedList<Producto>.CreateAsync(productos.AsNoTracking(), pageNumber ?? 1, pageSize));
-            */
         }
 
-        // GET: Escaparates/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.Escaparate == null)
-            {
-                return NotFound();
-            }
-
-            var escaparate = await _context.Escaparate
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (escaparate == null)
-            {
-                return NotFound();
-            }
-
-            return View(escaparate);
-        }
-
-        // GET: Escaparates/Create
-        public IActionResult Create()
+        // GET: EscaparatesController/Details/5
+        public ActionResult Details(int id)
         {
             return View();
         }
 
-        // POST: Escaparates/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // GET: EscaparatesController/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: EscaparatesController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id")] Escaparate escaparate)
+        public ActionResult Create(IFormCollection collection)
         {
-            if (ModelState.IsValid)
+            try
             {
-                _context.Add(escaparate);
-                await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(escaparate);
+            catch
+            {
+                return View();
+            }
         }
 
-        // GET: Escaparates/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        // GET: EscaparatesController/Edit/5
+        public ActionResult Edit(int id)
         {
-            if (id == null || _context.Escaparate == null)
-            {
-                return NotFound();
-            }
-
-            var escaparate = await _context.Escaparate.FindAsync(id);
-            if (escaparate == null)
-            {
-                return NotFound();
-            }
-            return View(escaparate);
+            return View();
         }
 
-        // POST: Escaparates/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: EscaparatesController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id")] Escaparate escaparate)
+        public ActionResult Edit(int id, IFormCollection collection)
         {
-            if (id != escaparate.Id)
+            try
             {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(escaparate);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!EscaparateExists(escaparate.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
                 return RedirectToAction(nameof(Index));
             }
-            return View(escaparate);
+            catch
+            {
+                return View();
+            }
         }
 
-        // GET: Escaparates/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        // GET: EscaparatesController/Delete/5
+        public ActionResult Delete(int id)
         {
-            if (id == null || _context.Escaparate == null)
-            {
-                return NotFound();
-            }
-
-            var escaparate = await _context.Escaparate
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (escaparate == null)
-            {
-                return NotFound();
-            }
-
-            return View(escaparate);
+            return View();
         }
 
-        // POST: Escaparates/Delete/5
-        [HttpPost, ActionName("Delete")]
+        // POST: EscaparatesController/Delete/5
+        [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public ActionResult Delete(int id, IFormCollection collection)
         {
-            if (_context.Escaparate == null)
+            try
             {
-                return Problem("Entity set 'MvcTiendaTFSContexto.Escaparate'  is null.");
+                return RedirectToAction(nameof(Index));
             }
-            var escaparate = await _context.Escaparate.FindAsync(id);
-            if (escaparate != null)
+            catch
             {
-                _context.Escaparate.Remove(escaparate);
+                return View();
             }
-            
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        private bool EscaparateExists(int id)
-        {
-          return (_context.Escaparate?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }
