@@ -49,6 +49,10 @@
       "PackagePath": "staticwebassets\\Imagenes\\19.jpg"
     },
     {
+      "Id": "C:\\Users\\lucveramo.AULA2506\\OneDrive\\Escritorio\\DWEC\\Servidor\\TFC\\TiendaTFS\\TiendaTFS\\wwwroot\\Imagenes\\1V.jpg",
+      "PackagePath": "staticwebassets\\Imagenes\\1V.jpg"
+    },
+    {
       "Id": "C:\\Users\\lucveramo.AULA2506\\OneDrive\\Escritorio\\DWEC\\Servidor\\TFC\\TiendaTFS\\TiendaTFS\\wwwroot\\Imagenes\\2.jpg",
       "PackagePath": "staticwebassets\\Imagenes\\2.jpg"
     },
@@ -95,6 +99,42 @@
     {
       "Id": "C:\\Users\\lucveramo.AULA2506\\OneDrive\\Escritorio\\DWEC\\Servidor\\TFC\\TiendaTFS\\TiendaTFS\\wwwroot\\Imagenes\\9.jpg",
       "PackagePath": "staticwebassets\\Imagenes\\9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lucveramo.AULA2506\\OneDrive\\Escritorio\\DWEC\\Servidor\\TFC\\TiendaTFS\\TiendaTFS\\wwwroot\\Imagenes\\Adp.jpg",
+      "PackagePath": "staticwebassets\\Imagenes\\Adp.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lucveramo.AULA2506\\OneDrive\\Escritorio\\DWEC\\Servidor\\TFC\\TiendaTFS\\TiendaTFS\\wwwroot\\Imagenes\\Electro.jpg",
+      "PackagePath": "staticwebassets\\Imagenes\\Electro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lucveramo.AULA2506\\OneDrive\\Escritorio\\DWEC\\Servidor\\TFC\\TiendaTFS\\TiendaTFS\\wwwroot\\Imagenes\\Hip.png",
+      "PackagePath": "staticwebassets\\Imagenes\\Hip.png"
+    },
+    {
+      "Id": "C:\\Users\\lucveramo.AULA2506\\OneDrive\\Escritorio\\DWEC\\Servidor\\TFC\\TiendaTFS\\TiendaTFS\\wwwroot\\Imagenes\\JRock.jpg",
+      "PackagePath": "staticwebassets\\Imagenes\\JRock.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lucveramo.AULA2506\\OneDrive\\Escritorio\\DWEC\\Servidor\\TFC\\TiendaTFS\\TiendaTFS\\wwwroot\\Imagenes\\Jazz.jpg",
+      "PackagePath": "staticwebassets\\Imagenes\\Jazz.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lucveramo.AULA2506\\OneDrive\\Escritorio\\DWEC\\Servidor\\TFC\\TiendaTFS\\TiendaTFS\\wwwroot\\Imagenes\\Metal.jpg",
+      "PackagePath": "staticwebassets\\Imagenes\\Metal.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lucveramo.AULA2506\\OneDrive\\Escritorio\\DWEC\\Servidor\\TFC\\TiendaTFS\\TiendaTFS\\wwwroot\\Imagenes\\Pop.png",
+      "PackagePath": "staticwebassets\\Imagenes\\Pop.png"
+    },
+    {
+      "Id": "C:\\Users\\lucveramo.AULA2506\\OneDrive\\Escritorio\\DWEC\\Servidor\\TFC\\TiendaTFS\\TiendaTFS\\wwwroot\\Imagenes\\Rap.png",
+      "PackagePath": "staticwebassets\\Imagenes\\Rap.png"
+    },
+    {
+      "Id": "C:\\Users\\lucveramo.AULA2506\\OneDrive\\Escritorio\\DWEC\\Servidor\\TFC\\TiendaTFS\\TiendaTFS\\wwwroot\\Imagenes\\Rock.jpg",
+      "PackagePath": "staticwebassets\\Imagenes\\Rock.jpg"
     },
     {
       "Id": "C:\\Users\\lucveramo.AULA2506\\OneDrive\\Escritorio\\DWEC\\Servidor\\TFC\\TiendaTFS\\TiendaTFS\\wwwroot\\css\\site.css",

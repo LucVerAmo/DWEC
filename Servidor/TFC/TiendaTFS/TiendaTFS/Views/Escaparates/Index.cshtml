@@ -5,7 +5,56 @@
     
     <div style="text-align:center;">
         @{
-            //if (ViewBag.DescripcionCategoria == "Valenciano")
+            if (ViewBag.DescripcionCategoria == "Valenciano")
+            {
+                <img style="width:50px; height:50px; margin-top:-2.auto%;" src="~/Imagenes/1V.jpg"/>
+                <h1 style="display:inline; margin-left:0.5%;">@ViewBag.DescripcionCategoria.ToUpper()</h1>
+            }
+            else if (ViewBag.DescripcionCategoria == "Rock")
+            {
+                <img style="width:50px; height:50px; margin-top:-2.auto%;" src="~/Imagenes/Rock.jpg" />
+                <h1 style="display:inline; margin-left:0.5%;">@ViewBag.DescripcionCategoria.ToUpper()</h1>
+            }
+            else if(ViewBag.DescripcionCategoria == "Metal")
+            {
+                <img style="width:50px; height:50px; margin-top:-2.auto%;" src="~/Imagenes/Metal.jpg" />
+                <h1 style="display:inline; margin-left:0.5%;">@ViewBag.DescripcionCategoria.ToUpper()</h1>
+            }
+            else if(ViewBag.DescripcionCategoria == "Pop")
+            {
+                <img style="width:50px; height:50px; margin-top:-2.auto%;" src="~/Imagenes/Pop.png" />
+                <h1 style="display:inline; margin-left:0.5%;">@ViewBag.DescripcionCategoria.ToUpper()</h1>
+            }
+            else if(ViewBag.DescripcionCategoria == "Jazz")
+            {
+                <img style="width:50px; height:50px; margin-top:-2.auto%;" src="~/Imagenes/Jazz.jpg" />
+                <h1 style="display:inline; margin-left:0.5%;">@ViewBag.DescripcionCategoria.ToUpper()</h1>
+            }
+            else if (ViewBag.DescripcionCategoria == "Electronica")
+            {
+                <img style="width:50px; height:50px; margin-top:-2.auto%;" src="~/Imagenes/Electro.jpg" />
+                <h1 style="display:inline; margin-left:0.5%;">@ViewBag.DescripcionCategoria.ToUpper()</h1>
+            }
+            else if (ViewBag.DescripcionCategoria == "Rap")
+            {
+                <img style="width:50px; height:50px; margin-top:-2.auto%;" src="~/Imagenes/Rap.png" />
+                <h1 style="display:inline; margin-left:0.5%;">@ViewBag.DescripcionCategoria.ToUpper()</h1>
+            }
+            else if (ViewBag.DescripcionCategoria == "Hip Hop")
+            {
+                <img style="width:50px; height:50px; margin-top:-2.auto%;" src="~/Imagenes/Hip.png" />
+                <h1 style="display:inline; margin-left:0.5%;">@ViewBag.DescripcionCategoria.ToUpper()</h1>
+            }
+            else if (ViewBag.DescripcionCategoria == "JRock")
+            {
+                <img style="width:50px; height:50px; margin-top:-2.auto%;" src="~/Imagenes/JRock.jpg" />
+                <h1 style="display:inline; margin-left:0.5%;">@ViewBag.DescripcionCategoria.ToUpper()</h1>
+            }
+            else if (ViewBag.DescripcionCategoria == "JPop")
+            {
+                <img style="width:50px; height:50px; margin-top:-2.auto%;" src="~/Imagenes/Adp.jpg" />
+                <h1 style="display:inline; margin-left:0.5%;">@ViewBag.DescripcionCategoria.ToUpper()</h1>
+            }
         }
     </div>
     <div class="container-fluid">
@@ -35,11 +84,11 @@
                                 {
                                     nombreImagen = item.Imagen;
                                 }
-                                <img class="card-img-top" style="width:200px; height:200px; margin: 15px;" src="~/Imagenes/@nombreImagen"/>
+                                <img class="card-img-top" style="width:200px; height:200px; margin: 10px;" src="~/Imagenes/@nombreImagen"/>
                                 <h5 class="card-text" style="text-decoration:underline; height:50px; margin-top:10px;">@Html.DisplayFor(modelItem => item.Descripcion)</h5>
                                 <hr style="width: 75%; margin-left:12.5%; margin-top:-20px;">
                                 <p class="card-text" style="height:50px; margin-top:-5px;">@Html.DisplayFor(modelItem => item.Texto)</p>
-                                <h2 style="color:midnightblue; margin-top:-10px;">@String.Format("{0:c)}", item.Precio)</h2>
+                                <h2 style="color:midnightblue; margin-top:-10px;">@Html.DisplayFor(modelItem => item.Precio)€</h2>
                                 <hr style="width:75%; margin-left:12.5%;">
                                 if(item.Stock >= 0)
                                 {

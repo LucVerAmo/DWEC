@@ -276,6 +276,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWlzRGF0b3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/lucveramo.AULA2506/OneDrive/Escritorio/DWEC/Servidor/TFC/TiendaTFS/TiendaTFS/Views/MisPedidos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWlzUGVkaWRvc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lucveramo.AULA2506/OneDrive/Escritorio/DWEC/Servidor/TFC/TiendaTFS/TiendaTFS/Views/MisPedidos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWlzUGVkaWRvc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lucveramo.AULA2506/OneDrive/Escritorio/DWEC/Servidor/TFC/TiendaTFS/TiendaTFS/Views/MisPedidos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWlzUGVkaWRvc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lucveramo.AULA2506/OneDrive/Escritorio/DWEC/Servidor/TFC/TiendaTFS/TiendaTFS/Views/MisPedidos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWlzUGVkaWRvc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lucveramo.AULA2506/OneDrive/Escritorio/DWEC/Servidor/TFC/TiendaTFS/TiendaTFS/Views/MisPedidos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWlzUGVkaWRvc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/lucveramo.AULA2506/OneDrive/Escritorio/DWEC/Servidor/TFC/TiendaTFS/TiendaTFS/Views/Pedidos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
