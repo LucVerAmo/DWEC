@@ -90,14 +90,7 @@
                                 <p class="card-text" style="height:50px; margin-top:-5px;">@Html.DisplayFor(modelItem => item.Texto)</p>
                                 <h2 style="color:midnightblue; margin-top:-10px;">@Html.DisplayFor(modelItem => item.Precio)€</h2>
                                 <hr style="width:75%; margin-left:12.5%;">
-                                if(item.Stock >= 0)
-                                {
-                                    <p>Unidades disponibles: @Html.DisplayFor(modelItem => item.Stock)</p>
-                                }
-                                else
-                                {
-                                    <p>Unidades disponibles: 0</p>
-                                }
+                                <p>Unidades disponibles: @Html.DisplayFor(modelItem => item.Stock)</p>
                                 if(stock > 0)
                                 {
                                     <div class="card-footer" style="width:auto;">
