@@ -1,0 +1,27 @@
+.col-4{
+    border: solid;
+    border-width: 1px;
+    background-color: lightgray;
+}
+.col-2{
+    border: solid;
+    border-width: 1px;
+    background-color: lightgray;
+}
+.col{
+    border: solid;
+    border-width: 1px;
+    background-color: lightgray;
+}
+.col-10{
+    border: solid;
+    border-width: 1px;
+    background-color: lightgray;
+}
+#texto1{
+    height: 300px;
+}
+#texto2{
+    margin-left: 10px;
+    height: 30px;
+}
