@@ -32,6 +32,67 @@ namespace TiendaTFS.Controllers
             productos = productos.Include(a => a.Categoria);
             return View(await productos.ToListAsync());
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AñadirCarrito(int id)
+        {
+            var producto = await _context.Productos.FirstOrDefaultAsync(m => m.Id == id);
+            if(producto == null)
+            {
+                return NotFound();
+            }
+            Pedido pedido = new Pedido();
+            Detalle detalle = new Detalle();
+            if(User.Identity.IsAuthenticated && await _context.Clientes.AnyAsync(p => p.Email == User.Identity.Name))
+            {
+                Cliente usuario = await _context.Clientes.Where(p => p.Email == User.Identity.Name).FirstOrDefaultAsync();
+                if(HttpContext.Session.GetString("NumPedido") == null && usuario.Id != null)
+                {
+                    pedido.Fecha = DateTime.Now;
+                    pedido.Confirmado = null;
+                    pedido.Preparado = null;
+                    pedido.Enviado = null;
+                    pedido.Cobrado = null;
+                    pedido.Devuelto = null;
+                    pedido.Anulado = null;
+                    pedido.ClienteId = usuario.Id;
+                    pedido.EstadoId = 4;
+                    if (ModelState.IsValid)
+                    {
+                        _context.Add(pedido);
+                        await _context.SaveChangesAsync();
+                    }
+                    HttpContext.Session.SetString("NumPedido", pedido.Id.ToString());
+                }
+                else
+                {
+                    return NotFound();
+                }
+                string strNumeroPedido = HttpContext.Session.GetString("NumPedido");
+                detalle.PedidoId = Convert.ToInt32(strNumeroPedido);
+                var detalleExistente = await _context.Detalles.FirstOrDefaultAsync(d => d.PedidoId == Convert.ToInt32(strNumeroPedido) && d.ProductoId == id);
+                if(detalleExistente != null)
+                {
+                    detalleExistente.Cantidad++;
+                    _context.Update(detalleExistente);
+                    await _context.SaveChangesAsync();
+                }
+                else
+                {
+                    detalle.ProductoId = id;
+                    detalle.Cantidad = 1;
+                    detalle.Precio = producto.Precio;
+                    detalle.Descuento = 0;
+                    if (ModelState.IsValid)
+                    {
+                        _context.Add(detalle);
+                        await _context.SaveChangesAsync();
+                    }
+                }
+                
+            }
+            return RedirectToAction(nameof(Index));
+        }
 
         // GET: EscaparatesController/Details/5
         public ActionResult Details(int id)
