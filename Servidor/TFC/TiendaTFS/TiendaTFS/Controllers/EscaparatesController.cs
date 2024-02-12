@@ -55,148 +55,56 @@ namespace TiendaTFS.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AñadirCarrito(int id)
         {
-            //Cargar datos de producto a añadir carrito
+            // Cargar datos de producto a añadir al carrito
             var producto = await _context.Productos
-                .FirstOrDefaultAsync(m => m.Id == id);
-
+            .FirstOrDefaultAsync(m => m.Id == id);
             if (producto == null)
             {
                 return NotFound();
             }
 
-            //Crear objetos pedido y detalle a agregar
             Pedido pedido = new Pedido();
             Detalle detalle = new Detalle();
-
-            if (User.Identity.IsAuthenticated && await _context.Clientes.AnyAsync(p => p.Email == User.Identity.Name))
+            // Crear nuevo pedido, si el carrito está vacío y, por tanto, no existe pedido actual
+            // La variable de sesión NumPedido almacena el número de pedido del carrito
+            //if (string.IsNullOrEmpty(HttpContext.Session.GetString("NumPedido")) )
+            if (HttpContext.Session.GetString("NumPedido") == null)
             {
-                Cliente usuario = await _context.Clientes.Where(p => p.Email == User.Identity.Name).FirstOrDefaultAsync();
-
-                if (HttpContext.Session.GetString("NumPedido") == null && usuario.Id != null)
-                {
-                    pedido.Fecha = DateTime.Now;
-                    pedido.Confirmado = null;
-                    pedido.Preparado = null;
-                    pedido.Enviado = null;
-                    pedido.Cobrado = null;
-                    pedido.Devuelto = null;
-                    pedido.Anulado = null;
-                    pedido.ClienteId = usuario.Id;
-                    pedido.EstadoId = 4;
-
-                    if (ModelState.IsValid)
-                    {
-                        _context.Add(pedido);
-                        await _context.SaveChangesAsync();
-                    }
-
-                    HttpContext.Session.SetString("NumPedido", pedido.Id.ToString());
-                }
-            }
-            else
-            {
-                return NotFound();
-            }
-
-            //Agregar producto al detalle de un pedido existente
-            string strNumeroPedido = HttpContext.Session.GetString("NumPedido");
-            detalle.PedidoId = Convert.ToInt32(strNumeroPedido);
-
-            //Verificar si el producto ya está en el carrito del usuario
-            var detalleExistente = await _context.Detalles
-                .FirstOrDefaultAsync(d => d.PedidoId == Convert.ToInt32(strNumeroPedido) && d.ProductoId == id);
-
-            if (detalleExistente != null)
-            {
-                //Actualizar cantidad del producto existente
-                detalleExistente.Cantidad++;
-                _context.Update(detalleExistente);
-                await _context.SaveChangesAsync();
-            }
-            else
-            {
-                //El valor de id tiene qel ID del producto a agregar
-                detalle.ProductoId = id;
-                detalle.Cantidad = 1;
-                detalle.Precio = producto.Precio;
-                detalle.Descuento = 0;
-
+                // Crear objeto pedido a agregar
+                pedido.Fecha = DateTime.Now;
+                pedido.Confirmado = null;
+                pedido.Preparado = null;
+                pedido.Enviado = null;
+                pedido.Cobrado = null;
+                pedido.Devuelto = null;
+                pedido.Anulado = null;
+                pedido.ClienteId = 2; // Asignar el cliente correspondiente al usuario actual
+                                      // Pruebas sobre el cliente Id=2 
+                pedido.EstadoId = 1; // Estado: "Pendiente" (Sin confirmar)
                 if (ModelState.IsValid)
                 {
-                    _context.Add(detalle);
+                    _context.Add(pedido);
                     await _context.SaveChangesAsync();
                 }
+                // Se asigna el número de pedido a la variable de sesión 
+                // que almacena el número de pedido del carrito
+                HttpContext.Session.SetString("NumPedido", pedido.Id.ToString());
+            }
+            // Crear objeto detalle para agregar el producto al detalle del pedido del carrito
+            string strNumeroPedido = HttpContext.Session.GetString("NumPedido");
+            detalle.PedidoId = Convert.ToInt32(strNumeroPedido);
+            detalle.ProductoId = id; // El valor id tiene el id del producto a agregar
+            detalle.Cantidad = 1;
+            detalle.Precio = producto.Precio;
+            detalle.Descuento = 0;
+            if (ModelState.IsValid)
+            {
+                _context.Add(detalle);
+                await _context.SaveChangesAsync();
             }
             return RedirectToAction(nameof(Index));
+
         }
 
-        // GET: EscaparatesController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: EscaparatesController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: EscaparatesController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: EscaparatesController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: EscaparatesController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: EscaparatesController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: EscaparatesController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }
