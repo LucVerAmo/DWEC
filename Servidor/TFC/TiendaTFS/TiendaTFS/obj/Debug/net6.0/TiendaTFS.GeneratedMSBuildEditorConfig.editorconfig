@@ -176,8 +176,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lucveramo.AULA2506/OneDrive/Escritorio/DWEC/Servidor/TFC/TiendaTFS/TiendaTFS/Views/Carritos/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fycml0b3NcSW5kZXguY3NodG1s
+[C:/Users/lucveramo.AULA2506/OneDrive/Escritorio/DWEC/Servidor/TFC/TiendaTFS/TiendaTFS/Views/Carrito/CarritoVacio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fycml0b1xDYXJyaXRvVmFjaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lucveramo.AULA2506/OneDrive/Escritorio/DWEC/Servidor/TFC/TiendaTFS/TiendaTFS/Views/Carrito/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fycml0b1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/lucveramo.AULA2506/OneDrive/Escritorio/DWEC/Servidor/TFC/TiendaTFS/TiendaTFS/Views/Categorias/Create.cshtml]
