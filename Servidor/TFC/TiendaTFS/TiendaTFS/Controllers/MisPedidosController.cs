@@ -31,8 +31,7 @@ namespace TiendaTFS.Controllers
             }
             var misPedidos = _context.Pedidos
             .Where(a => a.ClienteId == cliente.Id)
-            .OrderByDescending(a => a.Fecha)
-            .Include(a => a.Cliente).Include(a => a.Confirmado).Include(a => a.Preparado).Include(a=> a.Enviado).Include(a=>a.Cobrado).Include(a => a.Devuelto).Include(a => a.Anulado);
+            .OrderByDescending(a => a.Fecha);
             return View(await misPedidos.ToListAsync());
         }
 

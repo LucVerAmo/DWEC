@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bZ+JEZ5KYNI08RVjzqWPTx7QIDq4eWzob631gkbbTtw=",
+  "Hash": "/MeV5q03tcRDN8ICiTziXIwXAMHxUGK9CnwiAU7MCsU=",
   "Source": "TiendaTFS",
   "BasePath": "_content/TiendaTFS",
   "Mode": "Default",
@@ -1664,6 +1664,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Imagenes\\Rock.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\lucveramo.AULA2506\\OneDrive\\Escritorio\\DWEC\\Servidor\\TFC\\TiendaTFS\\TiendaTFS\\wwwroot\\Imagenes\\tienda.jpg",
+      "SourceId": "TiendaTFS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lucveramo.AULA2506\\OneDrive\\Escritorio\\DWEC\\Servidor\\TFC\\TiendaTFS\\TiendaTFS\\wwwroot\\",
+      "BasePath": "_content/TiendaTFS",
+      "RelativePath": "Imagenes/tienda.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Imagenes\\tienda.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\lucveramo.AULA2506\\OneDrive\\Escritorio\\DWEC\\Servidor\\TFC\\TiendaTFS\\TiendaTFS\\wwwroot\\Imagenes\\vacio.png",
+      "SourceId": "TiendaTFS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lucveramo.AULA2506\\OneDrive\\Escritorio\\DWEC\\Servidor\\TFC\\TiendaTFS\\TiendaTFS\\wwwroot\\",
+      "BasePath": "_content/TiendaTFS",
+      "RelativePath": "Imagenes/vacio.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Imagenes\\vacio.png"
     },
     {
       "Identity": "C:\\Users\\lucveramo.AULA2506\\OneDrive\\Escritorio\\DWEC\\Servidor\\TFC\\TiendaTFS\\TiendaTFS\\wwwroot\\js\\site.js",

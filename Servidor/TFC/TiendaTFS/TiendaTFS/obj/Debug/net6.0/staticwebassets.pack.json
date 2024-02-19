@@ -137,6 +137,14 @@
       "PackagePath": "staticwebassets\\Imagenes\\Rock.jpg"
     },
     {
+      "Id": "C:\\Users\\lucveramo.AULA2506\\OneDrive\\Escritorio\\DWEC\\Servidor\\TFC\\TiendaTFS\\TiendaTFS\\wwwroot\\Imagenes\\tienda.jpg",
+      "PackagePath": "staticwebassets\\Imagenes\\tienda.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lucveramo.AULA2506\\OneDrive\\Escritorio\\DWEC\\Servidor\\TFC\\TiendaTFS\\TiendaTFS\\wwwroot\\Imagenes\\vacio.png",
+      "PackagePath": "staticwebassets\\Imagenes\\vacio.png"
+    },
+    {
       "Id": "C:\\Users\\lucveramo.AULA2506\\OneDrive\\Escritorio\\DWEC\\Servidor\\TFC\\TiendaTFS\\TiendaTFS\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
