@@ -26,10 +26,19 @@ namespace TiendaTFS.Controllers
         }
 
         // GET: Productos
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string strCadenaBusqueda, string strCadenaBusquedaCat)
         {
-            var mvcTiendaTFSContexto = _context.Productos.Include(p => p.Categoria);
-            return View(await mvcTiendaTFSContexto.ToListAsync());
+            var producto = _context.Productos.AsQueryable();
+            producto = producto.Include(a => a.Categoria);
+            if (!String.IsNullOrEmpty(strCadenaBusqueda))
+            {
+                producto = producto.Where(s => s.Descripcion.Contains(strCadenaBusqueda));
+            }
+            if (!String.IsNullOrEmpty(strCadenaBusquedaCat))
+            {
+                producto = producto.Where(s => s.Categoria.Descripcion.Contains(strCadenaBusquedaCat));
+            }
+            return View(await producto.AsNoTracking().ToListAsync());
         }
 
         // GET: Productos/Details/5

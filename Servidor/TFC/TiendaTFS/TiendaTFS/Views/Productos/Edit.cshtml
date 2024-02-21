@@ -40,7 +40,10 @@
             </div>
             <div class="form-group">
                 <label asp-for="Escaparate" class="control-label"></label>
-                <input asp-for="Escaparate" class="form-control" />
+                <select name="Escaparate" class="form-select">
+                    <option value=true>Mostrar en el escaparate</option>
+                    <option value=false>No mostrar en el escaparate</option>
+                </select>
                 <span asp-validation-for="Escaparate" class="text-danger"></span>
             </div>
             <div class="form-group">
