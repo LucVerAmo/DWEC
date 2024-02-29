@@ -1,0 +1,15 @@
+#foot{
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
+    left: 0;
+}
+
+#footRow{
+    height: 50px;
+}
+
+#navA{
+    height: 50px; 
+    width: 80px;
+}
